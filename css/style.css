@@ -151,6 +151,10 @@ header.sticky {
 	line-height: 1.1;
 }
 
+.container .text {
+	text-align: center;
+}
+
 
 .row-items {
 	display: grid;
@@ -308,4 +312,233 @@ header.sticky {
 .col-content:hover {
 	transform: scale(1.04);
 	cursor: pointer;
+}
+
+.newsletter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 3rem;
+}
+
+.news-text h2 {
+	font-size: var(--h2-font);
+	margin-bottom: 5px;
+}
+
+.news-text p {
+	font-size: var(--p-font);
+	color: var(--second-color);
+	line-height: 30px;
+}
+
+.newsletter form {
+	max-width: 100%;
+	width: 500px;
+	position: relative;
+}
+
+.newsletter form input:first-child {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 150px 20px 30px;
+	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+	outline: none;
+	border: none;
+	border-radius: 15px;
+}
+
+.newsletter form input:last-child {
+	display: inline-block;
+	position: absolute;
+	outline: none;
+	border: none;
+	padding: 14px 30px;
+	border-radius: 15px;
+	background: var(--main-color);
+	color: var(--bg-color);
+	top: 6px;
+	right: 12px;
+	cursor: pointer;
+}
+
+#contact {
+	background: var(--main-color);
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer {
+	padding: 20px 0;
+}
+
+.list {
+	width: 25%;
+}
+
+.list h4 {
+	font-size: 21px;
+	color: var(--bg-color);
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.list h4::before {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 60px;
+	left: 0;
+	bottom: -10px;
+	background: var(--bg-color);
+}
+
+.list l li:not(last-child) {
+	margin-bottom: 16px;
+}
+
+.list ul li a {
+	color: #ffffffbf;
+	font-size: var(--p-font);
+	display: block;
+	transition: .3s;
+}
+
+.list ul li a:hover {
+	color: var(--bg-color);
+	transform: translateX(12px);
+}
+
+.list .social a {
+	height: 42px;
+	width: 42px;
+	background: var(--bg-color);
+	color: var(--main-color);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 21px;
+	border-radius: 15px;
+	transition: .3s;
+	margin-right: 10px;
+}
+
+.list .social a:hover {
+	transform: scale(1.2);
+}
+
+.copyright {
+	text-align: center;
+	padding-top: 90px;
+}
+
+.copyright p {
+	color: var(--bg-color);
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+
+@media (max-width: 1440px) {
+	header {
+		padding: 17px 3%;
+		transition: .2s;
+	}
+
+	header .sticky {
+		text-align: center;
+		padding-top: 90px;
+	}
+
+	section {
+		padding: 80px 3%;
+		transition: .2s;
+	}
+
+	:root {
+		--big-font: 4.5rem;
+		--h2-font: 2.3rem;
+		--p-font: 1rem;
+		transition: .2s;
+	}
+}
+
+
+@media (max-width:1040px) {
+	#menu-icon {
+		display: block;
+	}
+
+	.sticky #menu-icon {
+		color: var(--text-color);
+	}
+
+	.home {
+		height: 88vh;
+	}
+
+	.navbar {
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 270px;
+		height: 120vh;
+		background: #1067cc;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 150px 30px;
+		transition: 0.5s all;
+	}
+
+	.navbar a {
+		display: block;
+		margin: 1.2rem 0;
+	}
+
+	.sticky .navbar a {
+		color: var(--bg-color);
+	}
+
+	.navbar a:hover {
+		color: var(--text-color);
+	}
+
+	.open {
+		right: 0;
+	}
+
+	.list {
+		width: 50%;
+		margin-bottom: 12px;
+	}
+}
+
+@media (max-width:575px) {
+	.list {
+		width: 100%;
+	}
+
+	.newsletter form {
+		width: 360px;
+	}
+
+	:root {
+		--big-font: 3.8rem;
+		--h2-font: 1.8rem;
+		transition: .2s;
+	}
+
+	.text {
+		text-align: center;
+	}
+
+	.home {
+		height: 85vh;
+		transition: .2s;
+	}
 }
